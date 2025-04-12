@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🤖 Circuit Explainer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="toggle-theme" id="theme-toggle">🌙</div>
+
+    <div class="container">
+        <h1>🤖 Circuit Explainer</h1>
+        <form id="circuit-form" enctype="multipart/form-data">
+            <label>Describe your circuit:</label>
+            <textarea name="text" rows="3" placeholder="E.g., Series RLC with input AC signal..."></textarea>
+
+            <label>Or upload a circuit diagram:</label>
+            <input type="file" name="file" accept="image/*">
+
+            <button type="submit">Analyze</button>
+        </form>
+
+        <div id="response-area"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
